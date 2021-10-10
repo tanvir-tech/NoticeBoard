@@ -15,9 +15,11 @@
                 <br>
                 <label for="dept">Department :</label>
                 <select class="form-control col-lg-4" id="department" name="department">
-                    <option>ICT</option>
-                    <option>CSE</option>
-                    <option>TE</option>
+                    <option value="ICT">ICT</option>
+                    <option value="ICT">CSE</option>
+                    <option value="TE">TE</option>
+                    
+                    <option value="All">All</option>
                 </select>
                 <br>
             </h3>

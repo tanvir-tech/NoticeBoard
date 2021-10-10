@@ -14,12 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/',[NoticeController::class,'homeNotice']);
+Route::get('/home',[NoticeController::class,'homeNotice']);
+
 Route::get('deptNotice/{department}',[NoticeController::class,'deptNotice']);
 
 

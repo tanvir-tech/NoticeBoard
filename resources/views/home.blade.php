@@ -27,6 +27,20 @@
         </p>
     </div>
 
+    
+    @foreach ($notices as $notice)
+
+    <div class="container p-5">
+        <h4 class="text-center text-info" id="noticeTitle" name="noticeTitle">
+            {{$notice['title']}}
+        </h4>
+        <p id="generalNotice" id="noticeDescription" name="noticeDescription">
+            {{$notice['description']}}
+        </p>
+    </div>
+
+    @endforeach
+
 
 
 

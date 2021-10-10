@@ -29,10 +29,16 @@ class NoticeController extends Controller
             return "Department not found";
             
         }else{
-            return view('/deptNotice',['notices'=>$notices,$department]);
+            return view('/deptNotice',['notices'=>$notices]);
         }
-        
+        //return $notices;
+    }
 
+    function homeNotice(){
+
+        $notices = Notice::where('department','like', '%'."All".'%')->orderBy('id','DESC')->get();
+
+        return view('/home',['notices'=>$notices]);
         //return $notices;
     }
 
