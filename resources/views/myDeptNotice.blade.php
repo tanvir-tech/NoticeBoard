@@ -8,23 +8,20 @@
                 <br> to
                 <br> Department of
                 <h3>
-                    {{$notices[0]['department']}}
+                    {{Session::get('user')['department']}}
                 </h3>
             </div>
     
-
-            @foreach ($notices as $notice)
-
+    
+    
             <div class="container p-5">
                 <h4 class="text-center text-info" id="noticeTitle" name="noticeTitle">
-                    {{$notice['title']}}
+                    বিজ্ঞপ্তি
                 </h4>
                 <p id="generalNotice" id="noticeDescription" name="noticeDescription">
-                    {{$notice['description']}}
+                    THERE IS NO NOTICE AT THE MOMENT..!
                 </p>
             </div>
-        
-            @endforeach
     
     
         </div>

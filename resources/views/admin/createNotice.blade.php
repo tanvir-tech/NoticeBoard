@@ -8,13 +8,13 @@
         </div>
 
 
-        <form action="/sendNotice" method="POST">
+        <form action="/createNotice" method="POST">
+            @csrf 
             <h3>
                 <textarea class="form-control" id="title" name="title" rows="1" placeholder="Title of the notice"></textarea>
                 <br>
-
                 <label for="dept">Department :</label>
-                <select class="form-control col-lg-4" id="dept" name="dept">
+                <select class="form-control col-lg-4" id="department" name="department">
                     <option>ICT</option>
                     <option>CSE</option>
                     <option>TE</option>

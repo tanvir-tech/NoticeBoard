@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,9 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/deptNotice', function () {
-    return view('deptNotice');
-});
+Route::get('deptNotice/{department}',[NoticeController::class,'deptNotice']);
 
 
 //auth start
@@ -49,6 +47,9 @@ Route::get('/resetPass', function () {
 Route::get('/createNotice', function () {
     return view('admin/createNotice');
 });
+Route::post('/createNotice',[NoticeController::class,'createNotice']);
+
 Route::get('/editNotice', function () {
     return view('admin/noticeList');
 });
+

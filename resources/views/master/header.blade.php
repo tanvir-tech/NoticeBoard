@@ -28,11 +28,11 @@
         <nav class="navbar navbar-expand-md bg-secondary navbar-dark">
             <div class="container">
                 <!-- Brand -->
-                <a class="navbar-brand" href="#">MBSTU</a>
+                <a class="navbar-brand" href="/home">MBSTU</a>
                 <!-- Links -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home">Home</a>
+                        <a class="nav-link" href="/home">Home</a>
                     </li>
 
                     <li class="nav-item">
@@ -49,24 +49,24 @@
                             Departments
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-warning" href="#">ICT</a>
-                            <a class="dropdown-item text-warning" href="#">CSE</a>
-                            <a class="dropdown-item text-warning" href="#">TE</a>
-                            <a class="dropdown-item text-warning" href="#">ESRM</a>
-                            <a class="dropdown-item text-warning" href="#">CPS</a>
-                            <a class="dropdown-item text-warning" href="#">FTNS</a>
-                            <a class="dropdown-item text-warning" href="#">BGE</a>
-                            <a class="dropdown-item text-warning" href="#">Pharmacy</a>
-                            <a class="dropdown-item text-warning" href="#">BMB</a>
-                            <a class="dropdown-item text-warning" href="#">BBA</a>
-                            <a class="dropdown-item text-warning" href="#">Management</a>
-                            <a class="dropdown-item text-warning" href="#">Accounting</a>
-                            <a class="dropdown-item text-warning" href="#">Math</a>
-                            <a class="dropdown-item text-warning" href="#">Physics</a>
-                            <a class="dropdown-item text-warning" href="#">Chemistry</a>
-                            <a class="dropdown-item text-warning" href="#">Statistics</a>
-                            <a class="dropdown-item text-warning" href="#">Economics</a>
-                            <a class="dropdown-item text-warning" href="#">English</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/ICT" target="blank">ICT</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/CSE" target="blank">CSE</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/TE" target="blank">TE</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/ESRM" target="blank">ESRM</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/CPS" target="blank">CPS</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/FTNS" target="blank">FTNS</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/BGE" target="blank">BGE</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Pharmacy" target="blank">Pharmacy</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/BMB" target="blank">BMB</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/BBA" target="blank">BBA</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Management" target="blank">Management</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Accounting" target="blank">Accounting</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Math" target="blank">Math</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Physics" target="blank">Physics</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Chemistry" target="blank">Chemistry</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Statistics" target="blank">Statistics</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/Economics" target="blank">Economics</a>
+                            <a class="dropdown-item text-warning" href="deptNotice/English" target="blank">English</a>
                         </div>
                     </div>
 
