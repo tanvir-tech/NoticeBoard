@@ -26,7 +26,7 @@ class NoticeController extends Controller
         $notices = Notice::where('department','like', '%'.$department.'%')->orderBy('id','DESC')->get();
 
         if(count($notices)==0){
-            return "Department not found";
+            return "<h1>No notice for you</h1>";
             
         }else{
             return view('/deptNotice',['notices'=>$notices]);
