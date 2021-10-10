@@ -30,6 +30,7 @@ class NoticeController extends Controller
             
         }else{
             return view('/deptNotice',['notices'=>$notices]);
+            //return redirect('/deptNotice',['notices'=>$notices]);
         }
         //return $notices;
     }
@@ -40,6 +41,21 @@ class NoticeController extends Controller
 
         return view('/home',['notices'=>$notices]);
         //return $notices;
+    }
+
+    function noticeList(){
+
+        $notices = Notice::all();
+
+        return view('admin/noticeList',['notices'=>$notices]);
+        
+        //return $notices;
+    }
+
+    function deleteNotice($id){
+
+        Notice::destroy($id);
+        return redirect('noticeList');
     }
 
 }

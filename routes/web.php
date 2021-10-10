@@ -46,7 +46,6 @@ Route::get('/createNotice', function () {
 });
 Route::post('/createNotice',[NoticeController::class,'createNotice']);
 
-Route::get('/editNotice', function () {
-    return view('admin/noticeList');
-});
+Route::get('/noticeList',[NoticeController::class,'noticeList']);
+Route::get('deleteNotice/{id}',[NoticeController::class,'deleteNotice']);
 

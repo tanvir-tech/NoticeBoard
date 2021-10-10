@@ -13,24 +13,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Vaccine</td>
-                <td>All</td>
-                <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Student loan</td>
-                <td>All</td>
-                <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
-                </td>
-            </tr>
+         
+    @foreach ($notices as $notice)
+
+    <tr>
+        <th scope="row">{{$notice['id']}}</th>
+        <td>{{$notice['title']}}</td>
+        <td>{{$notice['department']}}</td>
+        <td>
+            <a href="deleteNotice/{{$notice['id']}}" class="text-white btn btn-danger">Delete</a>
+        </td>
+    </tr>
+
+    @endforeach
+
+
+
         </tbody>
     </table>
 
