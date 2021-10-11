@@ -18,7 +18,21 @@
                     <option value="ICT">ICT</option>
                     <option value="CSE">CSE</option>
                     <option value="TE">TE</option>
-                    
+                    <option value="ESRM">ESRM</option>
+                    <option value="CPS">CPS</option>
+                    <option value="FTNS">FTNS</option>
+                    <option value="BGE">BGE</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="BMB">BMB</option>
+                    <option value="BBA">BBA</option>
+                    <option value="Management">Management</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="Math">Math</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Statistics">Statistics</option>
+                    <option value="Economics">Economics</option>
+                    <option value="English">English</option>
                     <option value="All">All</option>
                 </select>
                 <br>
