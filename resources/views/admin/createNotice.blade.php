@@ -16,7 +16,7 @@
                 <label for="dept">Department :</label>
                 <select class="form-control col-lg-4" id="department" name="department">
                     <option value="ICT">ICT</option>
-                    <option value="ICT">CSE</option>
+                    <option value="CSE">CSE</option>
                     <option value="TE">TE</option>
                     
                     <option value="All">All</option>
