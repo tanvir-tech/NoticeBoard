@@ -4,22 +4,30 @@
         <div class="container">
     
             <div class="container p-5 text-center">
-                Department of
+                
                 <h3>
-                    {{Session::get('user')['department']}}
+                    For {{$notices[0]['department']}} department
+                    {{-- {{Session::get('user')['department']}} --}}
+                    
                 </h3>
             </div>
     
     
     
+            @foreach ($notices as $notice)
+
+            Time : 
+            <br>
             <div class="container p-5">
                 <h4 class="text-center text-info" id="noticeTitle" name="noticeTitle">
-                    বিজ্ঞপ্তি
+                    {{$notice['title']}}
                 </h4>
                 <p id="generalNotice" id="noticeDescription" name="noticeDescription">
-                    THERE IS NO NOTICE AT THE MOMENT..!
+                    {{$notice['description']}}
                 </p>
             </div>
+        
+            @endforeach
     
     
         </div>

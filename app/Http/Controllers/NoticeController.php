@@ -67,15 +67,15 @@ class NoticeController extends Controller
 
         $notices2 = Notice::where('department','like', '%'.$req->input('query').'%')->get();
 
-        // $notices3 = Notice::where('owner','like', '%'.$req->input('query').'%')->get();
+        $notices3 = Notice::where('description','like', '%'.$req->input('query').'%')->get();
 
-        // $notices4 = Notice::where('description','like', '%'.$req->input('query').'%')->get();
+        // $notices4 = Notice::where('owner','like', '%'.$req->input('query').'%')->get();
 
         // $notices5 = Notice::where('created_at','like', '%'.$req->input('query').'%')->get();
 
         
 
-        $notices = $notices1+$notices2;
+        $notices = $notices1+$notices2+$notices3;
 
         return view('/searchResult',['notices'=>$notices]);
         
