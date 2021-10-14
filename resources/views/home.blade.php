@@ -30,7 +30,4 @@
 
     @endforeach
 
-
-
-
-    {{-- @yield('content') --}}
+    {{View::make('master/footer')}}
