@@ -98,8 +98,8 @@
                             <a class="dropdown-item" href="Profile">Profile</a>
                             <a class="dropdown-item" href="myDepartment">My Department</a>
                             <a class="dropdown-item" href="createNotice">Create Notice</a>
-                            @if({{Session::get('user')['type']}}=='Teacher'||{{Session::get('user')['type']}}=='Officials')
-                                {{-- admin --}}
+                            {{-- admin --}}
+                            @if(Str::contains(Session::get('user')['type'] , "official"))
                                 <a class="dropdown-item" href="noticeList">All notices</a>
                                 <a class="dropdown-item" href="approveList">Approve</a>
                             @endif
