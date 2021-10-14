@@ -45,8 +45,11 @@ Route::get('/resetPass', function () {
 Route::get('/createNotice', function () {
     return view('admin/createNotice');
 });
+//create
 Route::post('/createNotice',[NoticeController::class,'createNotice']);
-
+//delete
 Route::get('/noticeList',[NoticeController::class,'noticeList']);
 Route::get('deleteNotice/{id}',[NoticeController::class,'deleteNotice']);
-
+//approve
+Route::get('approveList', [NoticeController::class,'approveList']);
+Route::get('approveNotice/{id}',[NoticeController::class,'approveNotice']);

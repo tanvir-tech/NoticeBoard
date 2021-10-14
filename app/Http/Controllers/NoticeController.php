@@ -51,15 +51,33 @@ class NoticeController extends Controller
 
     function noticeList(){
 
-        $notices = Notice::all();
+        $notices = Notice::where('approval',1)->orderBy('id','DESC')->get();
 
         return view('admin/noticeList',['notices'=>$notices]);
         
         //return $notices;
     }
 
-    function deleteNotice($id){
+    function approveList(){
 
+        $notices = Notice::where('approval',0)->orderBy('id','DESC')->get();
+
+        return view('admin/approval',['notices'=>$notices]);
+        
+        //return $notices;
+    }
+
+    function approveNotice($id){
+
+        $notice = Notice::find($id);
+        $notice->approval =true;
+        $notice->save();
+        return redirect('approveList');
+
+    }
+
+    function deleteNotice($id){
+        
         Notice::destroy($id);
         return redirect('noticeList');
     }

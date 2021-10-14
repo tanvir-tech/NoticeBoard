@@ -99,6 +99,7 @@
                             <a class="dropdown-item" href="myDepartment">My Department</a>
                             <a class="dropdown-item" href="createNotice">Create Notice</a>
                             <a class="dropdown-item" href="noticeList">All notices</a>
+                            <a class="dropdown-item" href="approveList">Approve</a>
                             <a class="dropdown-item" href="logout">Logout</a>
                         </div>
 
