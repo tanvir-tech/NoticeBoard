@@ -18,6 +18,7 @@ Route::get('/',[NoticeController::class,'homeNotice']);
 Route::get('/home',[NoticeController::class,'homeNotice']);
 
 Route::get('deptNotice/{department}',[NoticeController::class,'deptNotice']);
+Route::get('/search',[NoticeController::class,'search']);
 
 
 //auth start
