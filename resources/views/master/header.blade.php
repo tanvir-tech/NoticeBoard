@@ -35,13 +35,13 @@
                         <a class="nav-link" href="/home">Home</a>
                     </li>
 
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="#">Service</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">Gallery</a>
-                    </li>
+                    </li> --}}
 
                     <div class="dropdown p-1">
                         <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -78,9 +78,16 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Admistration</a>
                             <a class="dropdown-item" href="#">Admission</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Gallery</a>
                             <a class="dropdown-item" href="#">Contact</a>
                         </div>
                     </div>
+                    {{-- search  --}}
+      <form class="form-inline my-2 my-lg-0" action="/search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
+        <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+      </form>
 
                     @if(Session::has('user'))
                     <div class="dropdown p-1">
@@ -88,14 +95,17 @@
             {{Session::get('user')['name']}}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="orderlist">My Department</a>
+                            <a class="dropdown-item" href="Profile">Profile</a>
+                            <a class="dropdown-item" href="myDepartment">My Department</a>
+                            <a class="dropdown-item" href="createNotice">Create Notice</a>
+                            <a class="dropdown-item" href="noticeList">My Notices</a>
                             <a class="dropdown-item" href="logout">Logout</a>
                         </div>
 
                     @else 
                         <a class="nav-link" href="login">Login</a>
                     @endif
+
                     
                 </ul>
             </div>

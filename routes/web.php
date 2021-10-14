@@ -32,7 +32,7 @@ Route::get('/registration', function () {
 });
 Route::post('/registration',[UserController::class,'registration']);
 
-Route::get('/forgotPass', function () {
+Route::get('/forgetPass', function () {
     return view('auth/forgetPass');
 });
 Route::get('/resetPass', function () {
