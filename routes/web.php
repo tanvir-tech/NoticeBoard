@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[NoticeController::class,'homeNotice']);
+Route::get('/', function () {
+    return view('auth/login');
+});
 Route::get('/home',[NoticeController::class,'homeNotice']);
 
 Route::get('deptNotice/{department}',[NoticeController::class,'deptNotice']);
