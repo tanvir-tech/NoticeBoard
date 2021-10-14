@@ -15,7 +15,8 @@ class AddOwnerToNotices extends Migration
     {
         Schema::table('notices', function (Blueprint $table) {
             //
-            $table->string('owner');
+            $table->string('ownerType');
+            $table->string('ownerName');
         });
     }
 
@@ -28,7 +29,6 @@ class AddOwnerToNotices extends Migration
     {
         Schema::table('notices', function (Blueprint $table) {
             //
-            $table->string('owner');
         });
     }
 }

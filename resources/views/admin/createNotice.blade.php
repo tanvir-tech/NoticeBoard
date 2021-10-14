@@ -13,7 +13,7 @@
             <h3>
                 <textarea class="form-control" id="title" name="title" rows="1" placeholder="Title of the notice"></textarea>
                 <br>
-                <label for="dept">Department :</label>
+                <label for="dept">Target Department :</label>
                 <select class="form-control col-lg-4" id="department" name="department">
                     <option value="ICT">ICT</option>
                     <option value="CSE">CSE</option>

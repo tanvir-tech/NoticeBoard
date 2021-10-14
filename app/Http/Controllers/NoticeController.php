@@ -11,12 +11,14 @@ class NoticeController extends Controller
     function createNotice(Request $req){
         
         $userType = $req->session()->get('user')['type'];
+        $userName = $req->session()->get('user')['name'];
 
         $notice = new Notice();
         $notice->title = $req->title;
         $notice->description = $req->description;
         $notice->department = $req->department;
-        $notice->owner = $userType;
+        $notice->ownerType = $userType;
+        $notice->ownerName = $userName;
         $notice->approval = false;
 
         $notice->save();
@@ -27,7 +29,7 @@ class NoticeController extends Controller
 
     function deptNotice($department){
 
-        $notices = Notice::where('department','like', '%'.$department.'%')->orderBy('id','DESC')->get();
+        $notices = Notice::where('department','like', '%'.$department.'%')->where('approval',1)->orderBy('id','DESC')->get();
 
         if(count($notices)==0){
             return "<h1>No notice for you</h1>";
@@ -41,7 +43,7 @@ class NoticeController extends Controller
 
     function homeNotice(){
 
-        $notices = Notice::where('department','like', '%'."All".'%')->orderBy('id','DESC')->get();
+        $notices = Notice::where('department','like', '%'."All".'%')->where('approval',1)->orderBy('id','DESC')->get();
 
         return view('/home',['notices'=>$notices]);
         //return $notices;
@@ -67,12 +69,12 @@ class NoticeController extends Controller
         // return $req->input();
 
 
-        $notices = Notice::where('title','like', '%'.$req->input('query').'%')->orWhere('department','like', '%'.$req->input('query').'%')->get();
+        $notices = Notice::where('title','like', '%'.$req->input('query').'%')->orWhere('department','like', '%'.$req->input('query').'%')->orWhere('created_at','like', '%'.$req->input('query').'%')->get();
 
 
         // $notices4 = Notice::where('owner','like', '%'.$req->input('query').'%')->get();
 
-        // $notices5 = Notice::where('created_at','like', '%'.$req->input('query').'%')->get();
+        //where('created_at','like', '%'.$req->input('query').'%')->get();
 
        
 

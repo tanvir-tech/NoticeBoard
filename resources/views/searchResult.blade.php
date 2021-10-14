@@ -6,9 +6,7 @@
             <div class="container p-5 text-center">
                 
                 <h3>
-                    For {{$notices[0]['department']}} department
-                    {{-- {{Session::get('user')['department']}} --}}
-                    
+                    Search result
                 </h3>
             </div>
     
@@ -16,7 +14,10 @@
     
             @foreach ($notices as $notice)
 
-            Time : 
+            From : {{$notice['ownerName']}},{{$notice['ownerType']}}
+            <br>
+            Time : {{$notice['created_at']}}
+
             <br>
             <div class="container p-5">
                 <h4 class="text-center text-info" id="noticeTitle" name="noticeTitle">

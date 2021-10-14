@@ -13,18 +13,25 @@
             </div>
     
 
+    
             @foreach ($notices as $notice)
 
             <div class="container p-5">
-                <h4 class="text-center text-info" id="noticeTitle" name="noticeTitle">
+                <h3 class="text-center text-info" id="noticeTitle" name="noticeTitle">
                     {{$notice['title']}}
-                </h4>
+                </h3>
+                <h6 class="text-center text-info" id="noticeOwner" name="noticeOwner">
+                    From : {{$notice['ownerName']}},{{$notice['ownerType']}}
+                    <br>
+                    Timse : {{$notice['created_at']}}
+                </h6>
                 <p id="generalNotice" id="noticeDescription" name="noticeDescription">
                     {{$notice['description']}}
                 </p>
             </div>
         
             @endforeach
+        
     
     
         </div>
