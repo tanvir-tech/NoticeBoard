@@ -41,13 +41,6 @@
 
 
 
-
-
-
-
-
-
-
   </div>
   <!-- container close -->
   {{View::make('master/footer')}}

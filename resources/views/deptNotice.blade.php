@@ -23,7 +23,7 @@
                 <h6 class="text-center text-info" id="noticeOwner" name="noticeOwner">
                     From : {{$notice['ownerName']}},{{$notice['ownerType']}}
                     <br>
-                    Timse : {{$notice['created_at']}}
+                    Time : {{$notice['created_at']}}
                 </h6>
                 <p id="generalNotice" id="noticeDescription" name="noticeDescription">
                     {{$notice['description']}}

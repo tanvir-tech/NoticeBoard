@@ -59,3 +59,4 @@
 
 
 
+{{View::make('master/footer')}}

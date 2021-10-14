@@ -16,7 +16,7 @@ class UserController extends Controller
             return "Username and password not matched.";
         }else{
             $request->session()->put('user',$user);
-            return redirect('/');
+            return redirect('home');
         }
     }
 

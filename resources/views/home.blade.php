@@ -10,10 +10,6 @@
         </marquee>
     </div>
 
-
-
-
-    
     @foreach ($notices as $notice)
 
     <div class="container p-5">
@@ -22,7 +18,10 @@
         </h3>
         <h6 class="text-center text-info" id="noticeOwner" name="noticeOwner">
             From : {{$notice['ownerName']}},{{$notice['ownerType']}}
+            <br><br>
+            {{$notice['created_at']}}
         </h6>
+        <br>
         <p id="generalNotice" id="noticeDescription" name="noticeDescription">
             {{$notice['description']}}
         </p>

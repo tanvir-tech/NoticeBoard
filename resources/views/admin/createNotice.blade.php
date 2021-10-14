@@ -35,15 +35,20 @@
                     <option value="English">English</option>
                     <option value="All">All</option>
                 </select>
-                <br>
+             
+<br>
             </h3>
 
             <h3>Description :</h3>
             <textarea class="form-control" id="description" name="description" rows="12"></textarea>
             <br>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile">
+            
             <button class="btn btn-success" type="submit">Send Notice</button>
         </form>
 
 
     </div>
 
+    {{View::make('master/footer')}}

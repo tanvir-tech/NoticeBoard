@@ -9,7 +9,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body class="bg-dark text-white">
+<body class="bg-dark text-light">
     <header>
         <div class="container">
             <div class="row p-5">
@@ -35,13 +35,6 @@
                         <a class="nav-link" href="/home">Home</a>
                     </li>
 
-                    {{-- <li class="nav-item">
-                        <a class="nav-link" href="#">Service</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
-                    </li> --}}
 
                     <div class="dropdown p-1">
                         <button class="btn btn-outline-warning dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -84,7 +77,7 @@
                         </div>
                     </div>
                     {{-- search  --}}
-      <form class="form-inline my-2 my-lg-0" action="/search">
+      <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
         <button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
       </form>
