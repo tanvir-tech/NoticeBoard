@@ -10,10 +10,14 @@ class NoticeController extends Controller
     //
     function createNotice(Request $req){
         
+        $userType = $req->session()->get('user')['type'];
+
         $notice = new Notice();
         $notice->title = $req->title;
         $notice->description = $req->description;
         $notice->department = $req->department;
+        $notice->owner = $userType;
+        $notice->approval = false;
 
         $notice->save();
         return redirect('/home');

@@ -16,9 +16,12 @@ class NoticeSeeder extends Seeder
     {
         //
         DB::table('notices')->insert([
-            'title'=>'General Notice',
-            'description'=>'Notice description is inserted............',
-            'department'=>'ICT'
+            'title'=>'General Notice Demo-02',
+            'description'=>'Notice description is inserted by seeder ............',
+            'department'=>'All',
+            'owner'=>'Offical',
+            'approval'=>1
+
         ]);
     }
 }
