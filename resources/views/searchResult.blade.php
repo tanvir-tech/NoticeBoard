@@ -33,4 +33,4 @@
     
         </div>
     
- 
+        {{View::make('master/footer')}}

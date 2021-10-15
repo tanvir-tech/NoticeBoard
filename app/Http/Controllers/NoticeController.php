@@ -12,6 +12,7 @@ class NoticeController extends Controller
         
         $userType = $req->session()->get('user')['type'];
         $userName = $req->session()->get('user')['name'];
+        $userId = $req->session()->get('user')['id'];
 
         $notice = new Notice();
         $notice->title = $req->title;
@@ -19,6 +20,7 @@ class NoticeController extends Controller
         $notice->department = $req->department;
         $notice->ownerType = $userType;
         $notice->ownerName = $userName;
+        $notice->ownerId = $userId;
         $notice->approval = false;
 
         $notice->save();

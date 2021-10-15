@@ -21,3 +21,4 @@
           </div>
     </div>
     <div class="col-lg-3"></div>
+    {{View::make('master/footer')}}
