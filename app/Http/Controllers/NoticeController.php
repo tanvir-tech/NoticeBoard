@@ -23,14 +23,12 @@ class NoticeController extends Controller
         $userId = $req->session()->get('user')['id'];
 
         // file
-        // $old_noticefile_detail = $req->noticefile;
         $noticeFileExt = $req->noticefile->extension();
-
+        // $old_noticefile_detail = $req->noticefile;
         // dd($req->all());
         // dd($old_noticefile_detail);
         // dd($fileExt);
-        $new_noticeFileName = time().'_'.$req->department.'.'.$noticeFileExt;
-
+        $new_noticeFileName = time().'_'.$req->title.'_for_'.$req->department.'.'.$noticeFileExt;
         //save file
         $req->noticefile->move(public_path('noticefiles'), $new_noticeFileName);
 
