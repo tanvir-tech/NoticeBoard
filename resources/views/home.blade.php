@@ -25,6 +25,8 @@
         <p id="generalNotice" id="noticeDescription" name="noticeDescription">
             {{$notice['description']}}
         </p>
+        file : 
+        {{$notice['fileName']}}
     </div>
 
     @endforeach

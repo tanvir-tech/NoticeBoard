@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -55,3 +56,7 @@ Route::get('deleteNotice/{id}',[NoticeController::class,'deleteNotice']);
 //approve
 Route::get('approveList', [NoticeController::class,'approveList']);
 Route::get('approveNotice/{id}',[NoticeController::class,'approveNotice']);
+
+
+// file
+Route::get('download/{fileName}',[FileController::class,'downloadNotice']);

@@ -28,6 +28,10 @@
                 <p id="generalNotice" id="noticeDescription" name="noticeDescription">
                     {{$notice['description']}}
                 </p>
+                file : 
+                {{-- download/{{$notice['fileName']}} --}}
+                <a class="text-warning" href="{{url('/download',$notice['fileName'])}}">{{$notice['fileName']}}</a>
+                        
             </div>
         
             @endforeach

@@ -8,7 +8,7 @@
         </div>
 
 
-        <form action="/createNotice" method="POST">
+        <form action="/createNotice" method="POST" enctype="multipart/form-data">
             @csrf 
             <h3>
                 <textarea class="form-control" id="title" name="title" rows="1" placeholder="Title of the notice"></textarea>
@@ -42,8 +42,9 @@
             <h3>Description :</h3>
             <textarea class="form-control" id="description" name="description" rows="12"></textarea>
             <br>
-            <label for="myfile">Select a file:</label>
-            <input type="file" id="myfile" name="myfile">
+            {{-- file  --}}
+            <label for="noticefile">Select a file:</label>
+            <input type="file" id="noticefile" name="noticefile">
             
             <button class="btn btn-success" type="submit">Send Notice</button>
         </form>

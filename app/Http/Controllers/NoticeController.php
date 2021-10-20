@@ -7,13 +7,34 @@ use Illuminate\Http\Request;
 
 class NoticeController extends Controller
 {
-    //
     function createNotice(Request $req){
+
+        //validate
+        $req->validate([
+            'title'=>'required',
+            'description'=>'required',
+            'department'=>'required',
+            'noticefile'=>'required|file|mimes:jpg,jpeg,bmp,png,doc,docx,csv,rtf,xlsx,xls,txt,pdf,zip'
+        ]);
         
+        //from session
         $userType = $req->session()->get('user')['type'];
         $userName = $req->session()->get('user')['name'];
         $userId = $req->session()->get('user')['id'];
 
+        // file
+        // $old_noticefile_detail = $req->noticefile;
+        $noticeFileExt = $req->noticefile->extension();
+
+        // dd($req->all());
+        // dd($old_noticefile_detail);
+        // dd($fileExt);
+        $new_noticeFileName = time().'_'.$req->department.'.'.$noticeFileExt;
+
+        //save file
+        $req->noticefile->move(public_path('noticefiles'), $new_noticeFileName);
+
+        //form input
         $notice = new Notice();
         $notice->title = $req->title;
         $notice->description = $req->description;
@@ -22,6 +43,8 @@ class NoticeController extends Controller
         $notice->ownerName = $userName;
         $notice->ownerId = $userId;
         $notice->approval = false;
+        $notice->fileName = $new_noticeFileName;
+
 
         $notice->save();
         return redirect('/home');
